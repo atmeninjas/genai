@@ -42,6 +42,20 @@ def get_similar_words(word, model, topn=5):
 similar_words_football = get_similar_words('football', model_100d, topn=5)
 print(f"Words similar to 'football': {similar_words_football}")
 
+words_to_print = ['football', 'soccer']
+
+# Print their embeddings
+
+for word in words_to_print:
+
+if word in model_100d:
+
+print(f"Vector embedding for '{word}':\n{model_100d[word]}\n")
+
+else:
+
+print(f"Word '{word}' not found in the embeddings model.")
+
 !pip install gensim
 
 from gensim.models import Word2Vec
