@@ -84,4 +84,4 @@ headers = {"Authorization": "Bearer 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"}
 def query(payload):
  response = requests.post(API_URL, headers=headers, json=payload)
  return response.json()
- output = query({"inputs": text})
+output = query({"inputs": text})
